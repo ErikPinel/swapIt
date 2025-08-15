@@ -289,7 +289,7 @@ const styles = StyleSheet.create({
   dismissArea: {
     alignItems: "center",
     justifyContent: "center",
-    paddingVertical: 8,
+    paddingVertical: 18,
   },
   dismissTxt: {
     fontSize: 12,

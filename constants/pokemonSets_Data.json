@@ -1,0 +1,962 @@
+{
+    "Base Set": {
+        "id": "base1",
+        "total": 102,
+        "official": 102
+    },
+    "Jungle": {
+        "id": "base2",
+        "total": 64,
+        "official": 64
+    },
+    "Wizards Black Star Promos": {
+        "id": "basep",
+        "total": 53,
+        "official": 53
+    },
+    "W Promotional": {
+        "id": "wp",
+        "total": 7,
+        "official": 7
+    },
+    "Fossil": {
+        "id": "base3",
+        "total": 62,
+        "official": 62
+    },
+    "Jumbo cards": {
+        "id": "jumbo",
+        "total": 160,
+        "official": 160
+    },
+    "Base Set 2": {
+        "id": "base4",
+        "total": 130,
+        "official": 130
+    },
+    "Team Rocket": {
+        "id": "base5",
+        "total": 83,
+        "official": 82
+    },
+    "Gym Heroes": {
+        "id": "gym1",
+        "total": 132,
+        "official": 132
+    },
+    "Gym Challenge": {
+        "id": "gym2",
+        "total": 132,
+        "official": 132
+    },
+    "Neo Genesis": {
+        "id": "neo1",
+        "total": 111,
+        "official": 111
+    },
+    "Neo Discovery": {
+        "id": "neo2",
+        "total": 75,
+        "official": 75
+    },
+    "Southern Islands": {
+        "id": "si1",
+        "total": 18,
+        "official": 18
+    },
+    "Neo Revelation": {
+        "id": "neo3",
+        "total": 66,
+        "official": 64
+    },
+    "Neo Destiny": {
+        "id": "neo4",
+        "total": 113,
+        "official": 105
+    },
+    "Legendary Collection": {
+        "id": "lc",
+        "total": 110,
+        "official": 110
+    },
+    "Sample": {
+        "id": "sp",
+        "total": 10,
+        "official": 10
+    },
+    "Expedition Base Set": {
+        "id": "ecard1",
+        "total": 165,
+        "official": 165
+    },
+    "Best of game": {
+        "id": "bog",
+        "total": 9,
+        "official": 9
+    },
+    "Aquapolis": {
+        "id": "ecard2",
+        "total": 186,
+        "official": 147
+    },
+    "Skyridge": {
+        "id": "ecard3",
+        "total": 182,
+        "official": 144
+    },
+    "Ruby & Sapphire": {
+        "id": "ex1",
+        "total": 109,
+        "official": 109
+    },
+    "Sandstorm": {
+        "id": "ex2",
+        "total": 100,
+        "official": 100
+    },
+    "Nintendo Black Star Promos": {
+        "id": "np",
+        "total": 40,
+        "official": 40
+    },
+    "Dragon": {
+        "id": "ex3",
+        "total": 100,
+        "official": 97
+    },
+    "Team Magma vs Team Aqua": {
+        "id": "ex4",
+        "total": 97,
+        "official": 95
+    },
+    "Hidden Legends": {
+        "id": "ex5",
+        "total": 102,
+        "official": 101
+    },
+    "EX trainer Kit (Latias)": {
+        "id": "tk-ex-latia",
+        "total": 10,
+        "official": 10
+    },
+    "EX trainer Kit (Latios)": {
+        "id": "tk-ex-latio",
+        "total": 10,
+        "official": 10
+    },
+    "Pok\u00e9 Card Creator Pack": {
+        "id": "ex5.5",
+        "total": 5,
+        "official": 5
+    },
+    "POP Series 1": {
+        "id": "pop1",
+        "total": 17,
+        "official": 17
+    },
+    "FireRed & LeafGreen": {
+        "id": "ex6",
+        "total": 116,
+        "official": 112
+    },
+    "Team Rocket Returns": {
+        "id": "ex7",
+        "total": 111,
+        "official": 109
+    },
+    "Deoxys": {
+        "id": "ex8",
+        "total": 108,
+        "official": 107
+    },
+    "Emerald": {
+        "id": "ex9",
+        "total": 107,
+        "official": 106
+    },
+    "POP Series 2": {
+        "id": "pop2",
+        "total": 17,
+        "official": 17
+    },
+    "Unseen Forces": {
+        "id": "ex10",
+        "total": 117,
+        "official": 115
+    },
+    "Unseen Forces Unown Collection": {
+        "id": "exu",
+        "total": 28,
+        "official": 28
+    },
+    "Delta Species": {
+        "id": "ex11",
+        "total": 114,
+        "official": 113
+    },
+    "Legend Maker": {
+        "id": "ex12",
+        "total": 93,
+        "official": 92
+    },
+    "EX trainer Kit 2 (Minun)": {
+        "id": "tk-ex-m",
+        "total": 12,
+        "official": 12
+    },
+    "EX trainer Kit 2 (Plusle)": {
+        "id": "tk-ex-p",
+        "total": 12,
+        "official": 12
+    },
+    "POP Series 3": {
+        "id": "pop3",
+        "total": 17,
+        "official": 17
+    },
+    "Holon Phantoms": {
+        "id": "ex13",
+        "total": 111,
+        "official": 110
+    },
+    "POP Series 4": {
+        "id": "pop4",
+        "total": 17,
+        "official": 17
+    },
+    "Crystal Guardians": {
+        "id": "ex14",
+        "total": 100,
+        "official": 100
+    },
+    "Dragon Frontiers": {
+        "id": "ex15",
+        "total": 101,
+        "official": 101
+    },
+    "Power Keepers": {
+        "id": "ex16",
+        "total": 108,
+        "official": 108
+    },
+    "POP Series 5": {
+        "id": "pop5",
+        "total": 17,
+        "official": 17
+    },
+    "Diamond & Pearl": {
+        "id": "dp1",
+        "total": 130,
+        "official": 130
+    },
+    "DP Black Star Promos": {
+        "id": "dpp",
+        "total": 56,
+        "official": 56
+    },
+    "Mysterious Treasures": {
+        "id": "dp2",
+        "total": 124,
+        "official": 122
+    },
+    "POP Series 6": {
+        "id": "pop6",
+        "total": 17,
+        "official": 17
+    },
+    "DP trainer Kit (Lucario)": {
+        "id": "tk-dp-l",
+        "total": 11,
+        "official": 11
+    },
+    "DP trainer Kit (Manaphy)": {
+        "id": "tk-dp-m",
+        "total": 12,
+        "official": 12
+    },
+    "Secret Wonders": {
+        "id": "dp3",
+        "total": 132,
+        "official": 132
+    },
+    "Great Encounters": {
+        "id": "dp4",
+        "total": 106,
+        "official": 106
+    },
+    "POP Series 7": {
+        "id": "pop7",
+        "total": 17,
+        "official": 17
+    },
+    "Majestic Dawn": {
+        "id": "dp5",
+        "total": 100,
+        "official": 100
+    },
+    "Legends Awakened": {
+        "id": "dp6",
+        "total": 146,
+        "official": 146
+    },
+    "POP Series 8": {
+        "id": "pop8",
+        "total": 17,
+        "official": 17
+    },
+    "Stormfront": {
+        "id": "dp7",
+        "total": 106,
+        "official": 100
+    },
+    "Platinum": {
+        "id": "pl1",
+        "total": 133,
+        "official": 127
+    },
+    "POP Series 9": {
+        "id": "pop9",
+        "total": 17,
+        "official": 17
+    },
+    "Rising Rivals": {
+        "id": "pl2",
+        "total": 120,
+        "official": 111
+    },
+    "Supreme Victors": {
+        "id": "pl3",
+        "total": 153,
+        "official": 147
+    },
+    "Arceus": {
+        "id": "pl4",
+        "total": 111,
+        "official": 99
+    },
+    "Pok\u00e9mon Rumble": {
+        "id": "ru1",
+        "total": 16,
+        "official": 16
+    },
+    "HeartGold SoulSilver": {
+        "id": "hgss1",
+        "total": 124,
+        "official": 123
+    },
+    "HGSS Black Star Promos": {
+        "id": "hgssp",
+        "total": 25,
+        "official": 25
+    },
+    "HS trainer Kit (Raichu)": {
+        "id": "tk-hs-r",
+        "total": 30,
+        "official": 30
+    },
+    "HS trainer Kit (Gyarados)": {
+        "id": "tk-hs-g",
+        "total": 30,
+        "official": 30
+    },
+    "Unleashed": {
+        "id": "hgss2",
+        "total": 96,
+        "official": 95
+    },
+    "Undaunted": {
+        "id": "hgss3",
+        "total": 91,
+        "official": 90
+    },
+    "Triumphant": {
+        "id": "hgss4",
+        "total": 103,
+        "official": 102
+    },
+    "Call of Legends": {
+        "id": "col1",
+        "total": 106,
+        "official": 95
+    },
+    "Black & White": {
+        "id": "bw1",
+        "total": 115,
+        "official": 114
+    },
+    "BW Black Star Promos": {
+        "id": "bwp",
+        "total": 101,
+        "official": 101
+    },
+    "Macdonald's Collection 2011": {
+        "id": "2011bw",
+        "total": 12,
+        "official": 12
+    },
+    "Emerging Powers": {
+        "id": "bw2",
+        "total": 98,
+        "official": 98
+    },
+    "BW trainer Kit (Zoroark)": {
+        "id": "tk-bw-z",
+        "total": 30,
+        "official": 30
+    },
+    "BW trainer Kit (Excadrill)": {
+        "id": "tk-bw-e",
+        "total": 30,
+        "official": 30
+    },
+    "Noble Victories": {
+        "id": "bw3",
+        "total": 102,
+        "official": 101
+    },
+    "Next Destinies": {
+        "id": "bw4",
+        "total": 103,
+        "official": 99
+    },
+    "Dark Explorers": {
+        "id": "bw5",
+        "total": 111,
+        "official": 108
+    },
+    "Macdonald's Collection 2012": {
+        "id": "2012bw",
+        "total": 12,
+        "official": 12
+    },
+    "Dragons Exalted": {
+        "id": "bw6",
+        "total": 128,
+        "official": 124
+    },
+    "Dragon Vault": {
+        "id": "dv1",
+        "total": 21,
+        "official": 20
+    },
+    "Boundaries Crossed": {
+        "id": "bw7",
+        "total": 153,
+        "official": 149
+    },
+    "Plasma Storm": {
+        "id": "bw8",
+        "total": 138,
+        "official": 135
+    },
+    "Plasma Freeze": {
+        "id": "bw9",
+        "total": 122,
+        "official": 116
+    },
+    "Plasma Blast": {
+        "id": "bw10",
+        "total": 105,
+        "official": 101
+    },
+    "XY Black Star Promos": {
+        "id": "xyp",
+        "total": 216,
+        "official": 211
+    },
+    "Radiant Collection": {
+        "id": "rc",
+        "total": 25,
+        "official": 25
+    },
+    "Legendary Treasures": {
+        "id": "bw11",
+        "total": 140,
+        "official": 113
+    },
+    "Kalos Starter Set": {
+        "id": "xy0",
+        "total": 39,
+        "official": 39
+    },
+    "Yello A Alternate": {
+        "id": "xya",
+        "total": 6,
+        "official": 6
+    },
+    "XY": {
+        "id": "xy1",
+        "total": 146,
+        "official": 146
+    },
+    "XY trainer Kit (Sylveon)": {
+        "id": "tk-xy-sy",
+        "total": 30,
+        "official": 30
+    },
+    "XY trainer Kit (Noivern)": {
+        "id": "tk-xy-n",
+        "total": 30,
+        "official": 30
+    },
+    "Flashfire": {
+        "id": "xy2",
+        "total": 110,
+        "official": 106
+    },
+    "Macdonald's Collection 2014": {
+        "id": "2014xy",
+        "total": 12,
+        "official": 12
+    },
+    "Furious Fists": {
+        "id": "xy3",
+        "total": 114,
+        "official": 111
+    },
+    "XY trainer Kit (Wigglytuff)": {
+        "id": "tk-xy-w",
+        "total": 30,
+        "official": 30
+    },
+    "XY trainer Kit (Bisharp)": {
+        "id": "tk-xy-b",
+        "total": 30,
+        "official": 30
+    },
+    "Phantom Forces": {
+        "id": "xy4",
+        "total": 124,
+        "official": 119
+    },
+    "Primal Clash": {
+        "id": "xy5",
+        "total": 164,
+        "official": 160
+    },
+    "Double Crisis": {
+        "id": "dc1",
+        "total": 34,
+        "official": 34
+    },
+    "XY trainer Kit (Latios)": {
+        "id": "tk-xy-latio",
+        "total": 30,
+        "official": 30
+    },
+    "XY trainer Kit (Latias)": {
+        "id": "tk-xy-latia",
+        "total": 30,
+        "official": 30
+    },
+    "Roaring Skies": {
+        "id": "xy6",
+        "total": 112,
+        "official": 108
+    },
+    "Ancient Origins": {
+        "id": "xy7",
+        "total": 101,
+        "official": 98
+    },
+    "BREAKthrough": {
+        "id": "xy8",
+        "total": 165,
+        "official": 162
+    },
+    "Macdonald's Collection 2015": {
+        "id": "2015xy",
+        "total": 12,
+        "official": 12
+    },
+    "BREAKpoint": {
+        "id": "xy9",
+        "total": 126,
+        "official": 122
+    },
+    "Generations": {
+        "id": "g1",
+        "total": 117,
+        "official": 83
+    },
+    "XY trainer Kit (Pikachu Libre)": {
+        "id": "tk-xy-p",
+        "total": 30,
+        "official": 30
+    },
+    "XY trainer Kit (Suicune)": {
+        "id": "tk-xy-su",
+        "total": 30,
+        "official": 30
+    },
+    "Fates Collide": {
+        "id": "xy10",
+        "total": 129,
+        "official": 124
+    },
+    "Steam Siege": {
+        "id": "xy11",
+        "total": 116,
+        "official": 114
+    },
+    "Macdonald's Collection 2016": {
+        "id": "2016xy",
+        "total": 12,
+        "official": 12
+    },
+    "Evolutions": {
+        "id": "xy12",
+        "total": 113,
+        "official": 108
+    },
+    "SM Black Star Promos": {
+        "id": "smp",
+        "total": 244,
+        "official": 236
+    },
+    "Sun & Moon": {
+        "id": "sm1",
+        "total": 172,
+        "official": 149
+    },
+    "SM trainer Kit (Alolan Raichu)": {
+        "id": "tk-sm-r",
+        "total": 30,
+        "official": 30
+    },
+    "SM trainer Kit (Lycanroc)": {
+        "id": "tk-sm-l",
+        "total": 30,
+        "official": 30
+    },
+    "Guardians Rising": {
+        "id": "sm2",
+        "total": 169,
+        "official": 145
+    },
+    "Macdonald's Collection 2017": {
+        "id": "2017sm",
+        "total": 12,
+        "official": 12
+    },
+    "Burning Shadows": {
+        "id": "sm3",
+        "total": 169,
+        "official": 147
+    },
+    "Shining Legends": {
+        "id": "sm3.5",
+        "total": 78,
+        "official": 73
+    },
+    "Crimson Invasion": {
+        "id": "sm4",
+        "total": 125,
+        "official": 111
+    },
+    "Ultra Prism": {
+        "id": "sm5",
+        "total": 173,
+        "official": 156
+    },
+    "Forbidden Light": {
+        "id": "sm6",
+        "total": 146,
+        "official": 131
+    },
+    "Celestial Storm": {
+        "id": "sm7",
+        "total": 183,
+        "official": 168
+    },
+    "Dragon Majesty": {
+        "id": "sm7.5",
+        "total": 78,
+        "official": 70
+    },
+    "Macdonald's Collection 2018": {
+        "id": "2018sm",
+        "total": 12,
+        "official": 12
+    },
+    "Lost Thunder": {
+        "id": "sm8",
+        "total": 236,
+        "official": 214
+    },
+    "Team Up": {
+        "id": "sm9",
+        "total": 196,
+        "official": 181
+    },
+    "Detective Pikachu": {
+        "id": "det1",
+        "total": 18,
+        "official": 18
+    },
+    "Unbroken Bonds": {
+        "id": "sm10",
+        "total": 234,
+        "official": 214
+    },
+    "Unified Minds": {
+        "id": "sm11",
+        "total": 258,
+        "official": 236
+    },
+    "Hidden Fates": {
+        "id": "sm115",
+        "total": 69,
+        "official": 68
+    },
+    "Yellow A Alternate": {
+        "id": "sma",
+        "total": 94,
+        "official": 94
+    },
+    "Macdonald's Collection 2019": {
+        "id": "2019sm",
+        "total": 12,
+        "official": 12
+    },
+    "Cosmic Eclipse": {
+        "id": "sm12",
+        "total": 271,
+        "official": 236
+    },
+    "SWSH Black Star Promos": {
+        "id": "swshp",
+        "total": 287,
+        "official": 107
+    },
+    "Sword & Shield": {
+        "id": "swsh1",
+        "total": 216,
+        "official": 202
+    },
+    "Rebel Clash": {
+        "id": "swsh2",
+        "total": 209,
+        "official": 192
+    },
+    "Darkness Ablaze": {
+        "id": "swsh3",
+        "total": 201,
+        "official": 189
+    },
+    "Pok\u00e9mon Futsal 2020": {
+        "id": "fut2020",
+        "total": 5,
+        "official": 5
+    },
+    "Champion's Path": {
+        "id": "swsh3.5",
+        "total": 80,
+        "official": 70
+    },
+    "Vivid Voltage": {
+        "id": "swsh4",
+        "total": 203,
+        "official": 185
+    },
+    "Macdonald's Collection 2021": {
+        "id": "2021swsh",
+        "total": 25,
+        "official": 25
+    },
+    "Shining Fates": {
+        "id": "swsh4.5",
+        "total": 195,
+        "official": 72
+    },
+    "Battle Styles": {
+        "id": "swsh5",
+        "total": 183,
+        "official": 163
+    },
+    "Chilling Reign": {
+        "id": "swsh6",
+        "total": 233,
+        "official": 198
+    },
+    "Evolving Skies": {
+        "id": "swsh7",
+        "total": 237,
+        "official": 203
+    },
+    "Celebrations": {
+        "id": "cel25",
+        "total": 51,
+        "official": 25
+    },
+    "Fusion Strike": {
+        "id": "swsh8",
+        "total": 284,
+        "official": 264
+    },
+    "Brilliant Stars": {
+        "id": "swsh9",
+        "total": 216,
+        "official": 172
+    },
+    "Astral Radiance": {
+        "id": "swsh10",
+        "total": 246,
+        "official": 189
+    },
+    "Pok\u00e9mon GO": {
+        "id": "swsh10.5",
+        "total": 88,
+        "official": 78
+    },
+    "Lost Origin": {
+        "id": "swsh11",
+        "total": 247,
+        "official": 196
+    },
+    "Silver Tempest": {
+        "id": "swsh12",
+        "total": 245,
+        "official": 195
+    },
+    "Crown Zenith": {
+        "id": "swsh12.5",
+        "total": 230,
+        "official": 159
+    },
+    "SVP Black Star Promos": {
+        "id": "svp",
+        "total": 195,
+        "official": 0
+    },
+    "Scarlet & Violet": {
+        "id": "sv01",
+        "total": 258,
+        "official": 198
+    },
+    "Paldea Evolved": {
+        "id": "sv02",
+        "total": 279,
+        "official": 193
+    },
+    "Obsidian Flames": {
+        "id": "sv03",
+        "total": 230,
+        "official": 197
+    },
+    "151": {
+        "id": "sv03.5",
+        "total": 207,
+        "official": 165
+    },
+    "Paradox Rift": {
+        "id": "sv04",
+        "total": 266,
+        "official": 182
+    },
+    "Paldean Fates": {
+        "id": "sv04.5",
+        "total": 245,
+        "official": 91
+    },
+    "Temporal Forces": {
+        "id": "sv05",
+        "total": 218,
+        "official": 162
+    },
+    "Twilight Masquerade": {
+        "id": "sv06",
+        "total": 226,
+        "official": 167
+    },
+    "Shrouded Fable": {
+        "id": "sv06.5",
+        "total": 99,
+        "official": 64
+    },
+    "Stellar Crown": {
+        "id": "sv07",
+        "total": 175,
+        "official": 142
+    },
+    "Genetic Apex": {
+        "id": "A1",
+        "total": 286,
+        "official": 226
+    },
+    "Promos-A": {
+        "id": "P-A",
+        "total": 100,
+        "official": 0
+    },
+    "Surging Sparks": {
+        "id": "sv08",
+        "total": 252,
+        "official": 191
+    },
+    "Mythical Island": {
+        "id": "A1a",
+        "total": 86,
+        "official": 68
+    },
+    "Prismatic Evolutions": {
+        "id": "sv08.5",
+        "total": 180,
+        "official": 131
+    },
+    "Space-Time Smackdown": {
+        "id": "A2",
+        "total": 207,
+        "official": 140
+    },
+    "Triumphant Light": {
+        "id": "A2a",
+        "total": 96,
+        "official": 75
+    },
+    "Shining Revelry": {
+        "id": "A2b",
+        "total": 111,
+        "official": 72
+    },
+    "Journey Together": {
+        "id": "sv09",
+        "total": 190,
+        "official": 159
+    },
+    "Celestial Guardians": {
+        "id": "A3",
+        "total": 239,
+        "official": 155
+    },
+    "Extradimensional Crisis": {
+        "id": "A3a",
+        "total": 103,
+        "official": 69
+    },
+    "Destined Rivals": {
+        "id": "sv10",
+        "total": 244,
+        "official": 182
+    },
+    "Eevee Grove": {
+        "id": "A3b",
+        "total": 107,
+        "official": 69
+    },
+    "White Flare": {
+        "id": "sv10.5w",
+        "total": 173,
+        "official": 86
+    },
+    "Black Bolt": {
+        "id": "sv10.5b",
+        "total": 172,
+        "official": 86
+    },
+    "Wisdom of Sea and Sky": {
+        "id": "A4",
+        "total": 241,
+        "official": 161
+    }
+}
