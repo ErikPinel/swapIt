@@ -5,7 +5,7 @@ export function ActionsBar({ onReset, onApply }:{ onReset:()=>void; onApply:()=>
   return (
     <View style={s.actions}>
       <Pressable style={[s.btn, s.ghost]} onPress={onReset}>
-        <Text style={[s.btnTxt, { color: "#111" }]}>Reset</Text>
+        <Text style={[s.btnTxt, { color: "#111" }]}>Reset1</Text>
       </Pressable>
       <Pressable style={[s.btn, s.primary]} onPress={onApply}>
         <Text style={[s.btnTxt, { color: "#fff" }]}>Apply</Text>

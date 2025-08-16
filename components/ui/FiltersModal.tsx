@@ -1,5 +1,5 @@
 // components/modals/FiltersModal.tsx
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   Modal,
   View,
@@ -12,21 +12,16 @@ import {
 
 import SingleSearch from "@/components/inputs/SingleSearch";
 import FacetView from "@/components/facets/FacetView";
+import ActiveFilterPills from "@/components/ui/ActiveFilterPills";
 
-/** Filters (new model) */
 export type Filters = {
-  // core
-  query: string;                       // what the user typed
-  pickedSubItem?: string | null;       // e.g. "pokemon:cards", "electronics:phone"
+  query: string;
+  pickedSubItem?: string | null;
   facetsBySubItem?: Record<string, Record<string, any>>;
-
-  // universal
   condition: "any" | "new" | "like_new" | "used";
   onlyVerified: boolean;
   pickupRequired: boolean;
   sort: "distance" | "relevance";
-
-  // optional extras you already had; keep them to not break callers
   radiusKm: number;
   willingTopUp: number;
 };
@@ -84,17 +79,63 @@ export default function FiltersModal({
     });
   };
 
+  const pills = useMemo(() => {
+    const out: { id: string; label: string }[] = [];
+    if (local.condition !== "any") {
+      out.push({ id: "global:condition", label: `Condition: ${local.condition.replace("_", " ")}` });
+    }
+    if (local.pickedSubItem) {
+      const v = facetState ?? {};
+      const arrayKeys = Object.keys(v).filter((k) => Array.isArray(v[k]));
+      for (const k of arrayKeys) {
+        (v[k] as string[]).forEach((val: string) => out.push({ id: `facet:${k}:${val}`, label: val }));
+      }
+      const boolKeys = Object.keys(v).filter((k) => typeof v[k] === "boolean");
+      for (const k of boolKeys) if (v[k]) out.push({ id: `facet:${k}:true`, label: k });
+      const rangeKeys = Object.keys(v).filter(
+        (k) => v[k] && typeof v[k] === "object" && ("min" in v[k] || "max" in v[k])
+      );
+      for (const k of rangeKeys) {
+        const r = v[k] as { min?: number; max?: number };
+        const lbl = r.min != null && r.max != null ? `${k}: ${r.min}–${r.max}` : r.min != null ? `${k}: ≥ ${r.min}` : `≤ ${r.max}`;
+        out.push({ id: `facet:${k}:range`, label: lbl });
+      }
+    }
+    return out;
+  }, [local.condition, local.pickedSubItem, facetState]);
+
+  const removePill = (pillId: string) => {
+    if (pillId === "global:condition") return set("condition", "any");
+    if (!local.pickedSubItem) return;
+    const [scope, key, rest] = pillId.split(":");
+    if (scope !== "facet") return;
+    const curr = { ...(facetState ?? {}) };
+    if (Array.isArray(curr[key])) curr[key] = (curr[key] as string[]).filter((v) => v !== rest);
+    else if (typeof curr[key] === "boolean") curr[key] = false;
+    else if (rest === "range" && curr[key] && typeof curr[key] === "object") delete curr[key];
+    setFacetState(curr);
+  };
+
   return (
-    <Modal visible={visible} animationType="slide" transparent>
+    <Modal
+      visible={visible}
+      animationType="slide"
+      transparent
+      presentationStyle="overFullScreen"
+      statusBarTranslucent
+      onRequestClose={onClose}
+    >
       <View style={styles.overlay}>
         <View style={styles.sheet}>
           <ScrollView
-            contentContainerStyle={{ paddingBottom: 12 }}
+            contentContainerStyle={styles.scrollContent}
             showsVerticalScrollIndicator={false}
+            keyboardShouldPersistTaps="handled"
           >
             <Text style={styles.title}>Filters</Text>
 
-            {/* One search: “What are you looking for?” */}
+            <ActiveFilterPills pills={pills} onRemove={removePill} onClearAll={reset} />
+
             <View style={styles.block}>
               <Text style={styles.label}>What are you looking for?</Text>
               <SingleSearch
@@ -105,21 +146,15 @@ export default function FiltersModal({
               />
             </View>
 
-            {/* Dynamic, per-sub-item facets */}
             {local.pickedSubItem && (
               <View style={styles.block}>
                 <Text style={styles.label}>
                   Refine: {local.pickedSubItem.split(":").slice(1).join(" · ")}
                 </Text>
-                <FacetView
-                  subItemId={local.pickedSubItem}
-                  value={facetState}
-                  onChange={setFacetState}
-                />
+                <FacetView subItemId={local.pickedSubItem} value={facetState} onChange={setFacetState} />
               </View>
             )}
 
-            {/* Global: Condition segment */}
             <View style={styles.block}>
               <Text style={styles.label}>Condition</Text>
               <View style={styles.segment}>
@@ -131,12 +166,8 @@ export default function FiltersModal({
                       onPress={() => set("condition", opt)}
                       style={[styles.segBtn, active && styles.segBtnActive]}
                     >
-                      <Text
-                        style={[styles.segTxt, active && styles.segTxtActive]}
-                      >
-                        {opt === "like_new"
-                          ? "Like new"
-                          : opt[0].toUpperCase() + opt.slice(1)}
+                      <Text style={[styles.segTxt, active && styles.segTxtActive]}>
+                        {opt === "like_new" ? "Like new" : opt[0].toUpperCase() + opt.slice(1)}
                       </Text>
                     </Pressable>
                   );
@@ -144,23 +175,23 @@ export default function FiltersModal({
               </View>
             </View>
 
-            {/* Actions */}
-            <View style={styles.actions}>
-              <Pressable style={[styles.btn, styles.btnGhost]} onPress={reset}>
-                <Text style={[styles.btnTxt, { color: "#111" }]}>Reset</Text>
-              </Pressable>
-              <Pressable style={[styles.btn, styles.btnPrimary]} onPress={apply}>
-                <Text style={[styles.btnTxt, { color: "#fff" }]}>Apply</Text>
-              </Pressable>
-            </View>
+            <View style={{ height: 84 }} />
           </ScrollView>
+
+          <View style={styles.stickyBar}>
+            <Pressable style={[styles.btn, styles.btnGhost]} onPress={reset}>
+              <Text style={[styles.btnTxt, { color: "#111" }]}>Reset</Text>
+            </Pressable>
+            <Pressable style={[styles.btn, styles.btnPrimary]} onPress={apply}>
+              <Text style={[styles.btnTxt, { color: "#fff" }]}>Apply</Text>
+            </Pressable>
+          </View>
         </View>
       </View>
     </Modal>
   );
 }
 
-/* styles */
 const styles = StyleSheet.create({
   overlay: {
     flex: 1,
@@ -168,18 +199,23 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
   },
   sheet: {
+    width: "100%",
+    height: "82.5%",
+    alignSelf: "stretch",
     backgroundColor: "#fff",
-    padding: 20,
     borderTopLeftRadius: 18,
     borderTopRightRadius: 18,
-    paddingBottom: Platform.OS === "ios" ? 28 : 20,
-    height: "82.5%",
+    overflow: "hidden",
   },
-  title: { fontSize: 18, fontWeight: "700", marginBottom: 12 },
+  scrollContent: {
+    paddingTop: 20,
+    paddingHorizontal: 20,
+    paddingBottom: 12,
+  },
+  title: { fontSize: 22, fontWeight: "800", marginBottom: 12 },
   block: { marginTop: 14 },
   label: { fontSize: 14, fontWeight: "700", color: "#111", marginBottom: 6 },
-
-  segment: { flexDirection: "row", gap: 8, marginTop: 6, flexWrap: "wrap" },
+  segment: { flexDirection: "row", flexWrap: "wrap", marginTop: 6 },
   segBtn: {
     paddingHorizontal: 12,
     paddingVertical: 8,
@@ -187,15 +223,24 @@ const styles = StyleSheet.create({
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: "#e5e7eb",
     backgroundColor: "#fff",
+    marginRight: 8,
+    marginBottom: 8,
   },
   segBtnActive: { backgroundColor: "#2ecc71" },
   segTxt: { fontWeight: "700", color: "#111", fontSize: 13 },
   segTxtActive: { color: "#fff" },
-
-  actions: {
+  stickyBar: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    bottom: 35,
+    paddingHorizontal: 20,
+    paddingVertical: 12,
+    backgroundColor: "#fff",
+    borderTopWidth: StyleSheet.hairlineWidth,
+    borderTopColor: "#e5e7eb",
     flexDirection: "row",
-    justifyContent: "space-between",
-    marginTop: 18,
+    gap: 10,
   },
   btn: {
     flex: 1,
@@ -206,7 +251,6 @@ const styles = StyleSheet.create({
   btnGhost: {
     borderWidth: 1,
     borderColor: "#e5e7eb",
-    marginRight: 10,
     backgroundColor: "#fff",
   },
   btnPrimary: { backgroundColor: "#111" },

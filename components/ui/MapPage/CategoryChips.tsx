@@ -189,7 +189,7 @@ export default function CategoryChips({
             {/* Actions */}
             <View style={styles.actions}>
               <Pressable onPress={applyDefaults} style={[styles.btn, styles.btnGhost]}>
-                <Text style={[styles.btnTxt, { color: "#111" }]}>Reset</Text>
+                <Text style={[styles.btnTxt, { color: "#111" }]}>Reset1</Text>
               </Pressable>
               <Pressable onPress={toggleOpen} style={[styles.btn, styles.btnPrimary]}>
                 <Text style={[styles.btnTxt, { color: "#fff" }]}>Done</Text>
